@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#E6AD00">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+  <title>SENAI Progressive WebApp</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/app.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="login">
+  <div class="logo-wrapper">
+    <img src="images/webchat.svg" alt="Logo" class="logo">
+  </div>
+
+  <form class="login-form">
+
+    <fieldset>
+      <legend><h2>Login</h2></legend>
+
+      <label for="email">Email
+        <input type="text" id="email" placeholder="Digite seu email">
+      </label>
+
+      <button id="logar" class="btn success">Continuar</button>
+    </fieldset>
+      
+  </form>
+</div>
+
+<header class="toolbar">
+  <a href="/">WebChat</a>
+
+  <button class="search-btn">
+    <svg viewBox="0 0 24 24"><title>Pesquisar</title>
+      <path
+          d="M15.5 14h-.8l-.3-.3c1-1 1.6-2.6 1.6-4.2C16 6 13 3 9.5 3S3 6 3 9.5 6 16 9.5 16c1.6 0 3-.6 4.2-1.6l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0C7 14 5 12 5 9.5S7 5 9.5 5 14 7 14 9.5 12 14 9.5 14z"></path>
+    </svg>
+  </button>
+
+  <div class="search-bar">
+
+    <form>
+      <button class="back-btn">
+        <svg viewBox="0 0 24 24"><title>Voltar</title>
+          <path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2z"></path>
+        </svg>
+      </button>
+      <input type="text" placeholder="Pesquisar">
+    </form>
+  </div>
+</header>
+
+
+<section id="content">
+  <h3>Chat</h3>
+  <div class="chat-messages">
+    <div class="loading">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="0" width="4" height="10" fill="#333" transform="translate(0 7.77778)">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite"></animateTransform>
+      </rect>
+      <rect x="10" y="0" width="4" height="10" fill="#333" transform="translate(0 18.8889)">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+      </rect>
+      <rect x="20" y="0" width="4" height="10" fill="#333" transform="translate(0 5.55556)">
+        <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+      </rect>
+    </svg>
+    </div>
+  </div>
+
+
+  <form class="send-message">
+    <label>
+      <input type="text" name="mensagem" id="mensagem" placeholder="Digite a mensagem aqui" maxlength="80">
+    </label>
+    <input type="submit" name="send" class="fab-btn success" value=">" id="sendChat">
+  </form>
+
+  <!-- <div id="transition-content"></div> -->
+</section>
+<!-- <button id="createPost" class="fab-btn success animate-in">+</button> -->
+
+<div class="overlay"></div>
+
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js" ></script>
+<script src="scripts/feedback.js"></script>
+<script src="scripts/moment.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
